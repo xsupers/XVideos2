@@ -173,6 +173,23 @@
       text-align: center;
       font-weight: bold;
     }
+
+    /* Стили для контейнера изображения join.png */
+    .join-image-overlay {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Это предотвратит выход изображения за пределы контейнера */
+    }
+
+    /* Стили для самого изображения */
+    .join-image-overlay img {
+      max-width: 100%;
+      height: auto; /* Сохраняет пропорции */
+      object-fit: contain; /* Обеспечивает, чтобы изображение сохраняло пропорции, не искажая их */
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
