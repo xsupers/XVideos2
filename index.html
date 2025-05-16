@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="translate: yes">
+  <title>XVideos Access - Multilingual</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif, system-ui;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    #google_translate_element {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background-color: #000;
+      padding: 3px;
+      border-radius: 5px;
+    }
+
+    #container {
+      width: 60%;
+      max-width: 1200px;
+      background: rgba(30, 30, 30, 0.95);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin-top: 53px;
+    }
+
+    .heading {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff4500;
+      text-shadow: 1px 1px 7px #000;
+      margin-bottom: 15px;
+    }
+
+    .image-container {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #cta-button {
+      padding: 12px 30px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(45deg, #ff4500, #ff6347);
+      text-transform: uppercase;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 3px 10px rgba(255, 69, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 15px;
+    }
+
+    #cta-button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 7px 20px rgba(255, 69, 0, 0.5);
+    }
+
+    #error-message {
+      display: none;
+      color: #ff0000;
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .password-container {
+      margin-top: 25px;
+      color: #fff;
+    }
+
+    #password {
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ff4500;
+      background-color: #333;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    #generate-password, #copy-password {
+      padding: 10px 25px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #fff;
+      background-color: #ff4500;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #generate-password:hover, #copy-password:hover {
+      background-color: #ff6347;
+    }
+
+    .notification {
+      color: #28a745;
+      font-size: 13px;
+      margin-top: 12px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .info-text {
+      color: #ff4500;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .sub-info-text {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    .steps p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .steps .number {
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    .registration-container h1 {
+      color: #ff4500;
+      font-size: 24px;
+    }
+
+    .paste-password-text {
+      font-size: 14px;
+      color: #ff4500;
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element"></div> <!-- Виджет Google Translate -->
+
+  <div id="container">
+    <div class="heading">WATCH FULL VIDEOS IN HD</div>
+
+    <div class="image-container">
+      <img src="ai_bot.png" alt="AI Bot" />
+    </div>
+
+    <div class="password-container">
+      <input type="text" id="password" readonly placeholder="*****************" />
+      <br>
+      <button onclick="generatePassword()" id="generate-password">GET ACCESS PASSWORD</button>
+      <button onclick="copyPassword()" id="copy-password">COPY PASSWORD</button>
+      <div class="notification" id="notification">Password copied!</div>
+    </div>
+
+    <div class="info-text">Unlock the XVideos section in 2 easy steps, it takes a few seconds!</div>
+
+    <div class="steps">
+      <p><span class="number">1.</span> ENTER USERNAME AND EMAIL.</p>
+      <p><span class="number">2.</span> GO TO THE LINK IN YOUR EMAIL AND PASTE PASSWORD.</p>
+
+      <p class="paste-password-text">Or or continue with and paste the password</p>
+
+      <div class="join-image-overlay">
+        <img src="join.png" alt="Join Instructions">
+      </div>
+    </div>
+
+    <div id="error-message">Please generate and copy the password before unlocking.</div>
+
+    <div class="registration-container">
+      <h1>Join Now for Free!</h1>
+      <p>LIMITED OFFER</p>
+      <button id="cta-button">UNLOCK</button>
+    </div>
+
+    <div class="sub-heading">490000+ EXCLUSIVE HD VIDEOS BY CATEGORY</div>
+
+    <div class="image-container">
+      <img src="ai_botfull.png" alt="AI Bot Full" />
+    </div>
+  </div>
+
+  <script>
+    let passwordGenerated = false;
+    let passwordCopied = false;
+
+    function generatePassword() {
+      const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      const specialChars = "~!@#$%^&*()_+";
+      const passwordLength = 16;
+      let password = "";
+      password += specialChars[Math.floor(Math.random() * specialChars.length)];
+      for (let i = password.length; i < passwordLength; i++) {
+        const randomIndex = Math.floor(Math.random() * chars.length);
+        password += chars[randomIndex];
+      }
+      password = password.split('').sort(() => Math.random() - 0.5).join('');
+      document.getElementById('password').value = password;
+      passwordGenerated = true;
+      document.getElementById('error-message').style.display = 'none';
+    }
+
+    function copyPassword() {
+      const passwordField = document.getElementById('password');
+      passwordField.select();
+      document.execCommand('copy');
+      const notification = document.getElementById('notification');
+      notification.style.display = 'block';
+      setTimeout(() => { notification.style.display = 'none'; }, 2000);
+      passwordCopied = true;
+      document.getElementById('error-message').style.display = 'none';
+    }
+
+    document.getElementById('cta-button').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!passwordGenerated || !passwordCopied) {
+        document.getElementById('error-message').style.display = 'block';
+        return;
+      }
+      window.location.href = "https://prev.affomelody.com/click?pid=3749&offer_id=64&path=signup/user";
+    });
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,af,am,ar,bn,bs,ca,cs,cy,da,de,el,es,et,fa,fi,fil,fr,ga,gl,gu,he,hi,hr,hu,hy,id,is,it,ja,ka,kn,ko,la,lt,lv,mk,ml,mn,ms,my,ne,pl,ps,pt,ro,ru,si,sk,sl,sq,sr,sv,ta,te,tr,uk,ur,vi,cy,xh,zh-CN,zh-TW',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
