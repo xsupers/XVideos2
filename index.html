@@ -174,26 +174,41 @@
       font-weight: bold;
     }
 
-    /* Стили для контейнера изображения join.png */
     .join-image-overlay {
       margin: 15px 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden; /* Это предотвратит выход изображения за пределы контейнера */
+      overflow: hidden;
     }
 
-    /* Стили для самого изображения */
     .join-image-overlay img {
       max-width: 100%;
-      height: auto; /* Сохраняет пропорции */
-      object-fit: contain; /* Обеспечивает, чтобы изображение сохраняло пропорции, не искажая их */
+      height: auto;
+      object-fit: contain;
       border-radius: 5px;
+    }
+
+    .sub-heading {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    /* Mobile styles: container full width */
+    @media screen and (max-width: 768px) {
+      #container {
+        width: 100%;
+        border-radius: 0;
+        padding: 15px;
+        margin-top: 60px;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="google_translate_element"></div> <!-- Виджет Google Translate -->
+  <div id="google_translate_element"></div>
 
   <div id="container">
     <div class="heading">WATCH FULL VIDEOS IN HD</div>
@@ -215,7 +230,6 @@
     <div class="steps">
       <p><span class="number">1.</span> ENTER USERNAME AND EMAIL.</p>
       <p><span class="number">2.</span> GO TO THE LINK IN YOUR EMAIL AND PASTE PASSWORD.</p>
-
       <p class="paste-password-text">Or continue with and paste the password</p>
 
       <div class="join-image-overlay">
@@ -287,7 +301,6 @@
     }
   </script>
 
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
